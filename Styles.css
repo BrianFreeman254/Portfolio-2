@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #8e9eab);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Logo */
+header.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Card Container */
+.portfolio-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Profile Container */
+.profile-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.profile-container img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.rotating-circle {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #00bfa6, #fbe7e7);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotate 5s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Highlight Text */
+h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+h1 .highlight {
+  color: #00bfa6;
+  font-weight: bold;
+}
+
+/* Description */
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin: 1rem 0 2rem;
+  line-height: 1.5;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons .icon {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons .instagram {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.social-icons .instagram:hover {
+  transform: scale(1.1);
+}
+
+.social-icons .whatsapp {
+  background: #25d366;
+}
+
+.social-icons .whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* Button */
+.hire-button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #00bfa6;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hire-button:hover {
+  background: #007b63;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .portfolio-card {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .hire-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
